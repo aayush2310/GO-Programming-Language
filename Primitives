@@ -4,3 +4,43 @@ Types of information to be stored in GO
   a)Integers
   b)Floating Points
   c)Complex Numbers
+  
+  //Working with Boolean Variables:-
+  
+  package main
+  import(
+       "fmt"
+  )
+  func main(){
+        var n bool=true
+        fmt.Printf("%v,%T\n",n,n)
+  }
+  
+  
+  package main
+  import(
+       "fmt"
+  )
+  func main(){
+            n:=1==1
+            m:=1==2
+            fmt.Printf("%v,%T\n",n,n)
+            fmt.Printf("%v,%T",m,m)
+  }
+  
+  //Everytime we initialize a variable in GO,it initially has a 0 value.
+  //And the zero value for boolean is false
+  
+  //signed integer:-
+  
+  n:=42
+  fmt.Printf("%v,%T\n",n,n)
+  
+  //unsigned integer:-
+  
+  var n uint16=42
+  fmt.Print("%v,%T\n",n,n)
+
+
+int,int8,int16,int32,int64
+uint,uint8,uint16,uint32,uint64
