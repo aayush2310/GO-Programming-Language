@@ -99,11 +99,121 @@ Key Features:-
   //Re-assignment of variable wont create an error but re declaration of the variable will create an error
   The variable present at the innermost level in the function overshadows the outer variables-This is called shadowing
   
+  If a varable is declared but not used then the program will show error.
+  
+  package main
+  
+  import {
+       "fmt"
+  }
+  
+  func main(){
+         var i int=42
+         j:=13
+         
+         fmt.Println(i)
+         
+  }
   
   
+  //Naming the variable:-
+    
+   If the variable is declared at the package level in lowercase then it is accessible to that package only but if it is declared in uppercase then it is accessible 
+   to the outside world as well.
+   
+   package main
+   
+   import{
+       "fmt"
+   }
+   
+   var I int =42
+   func main(){
+          var i int =43
+          j:=13
+          
+          fmt.Println(i)
+   }
+   
+   3 levels of visibility of the variables in GO:-
+   1)If variable is at the package level and declared in small then it is accessible to that package only.Any file in that package can access that variable.
+   2)If variable is upper case at the package level then it is exported from the package and globally visible.
+   3)If the variable is declared inside a main function then it is accessible in that main block only.
+   
+   If you declare a variable that is going to be used for a very long time then its length should also be large and vice-versa.
+   
+   If we are dealing with any acronym while naming a variable then it should all be in uppercase.eg:-
+   
+   
+   package main
+   
+   import{
+       "fmt"
+   }
+   
+   var I int =42
+   func main(){
+          var i int =43
+          j:=13
+          var theHTTP string="https://google.com"
+          fmt.Println(i)
+   }
+   
+   //How to convert from one variable type to another
+   
+   
+   package main
+   
+   import{
+       "fmt"
+   }
+   
+   func main(){
+          var i int =43
+          fmt.Printf("%v,%T\n",i,i)
+          
+          var j float32
+          j=float32(i)
+          fmt.Printf("%v, %T\n",j,j)
+   }
+  
+  Note:-If I am converting a float to int then the values after the decimal point will get lost.Only the integer part of it will be retained.
+  
+  //Converting number to string
+  
+  package main
+  
+  import (
+        "fmt"
+  )
+  
+  func main(){
+       var i int=42
+       fmt.Printf("%v,%T\n",i,i)
+       
+       var j string
+       j=string(i)
+       fmt.Printf("%v,%T\n",j,j)
+  }
+  
+  //This will o/p the astrix as per the serial number of characters
   
   
+  package main
   
+  import (
+        "fmt"
+        "strconv"
+  )
+  
+  func main(){
+       var i int=42
+       fmt.Printf("%v,%T\n",i,i)
+       
+       var j string
+       j=strconv.Itoa(i)
+       fmt.Printf("%v,%T\n",j,j)
+  }
   
   
   
