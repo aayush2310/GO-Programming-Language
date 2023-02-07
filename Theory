@@ -1,0 +1,110 @@
+Why Go language?
+=>Python-Easy to use but slow
+  Java-Increasingly complex type system
+  C/C++-Complex type system,slow compile time
+ Also at the time these languages were created,single threaded processes were mostly used,so a bit inefficient with multi-threaded processes.
+ 
+Go-golang
+->Strong and statically typed language-inherits this feature from Java and C++
+  Strong typing means that the type of the variable cannot change over time-if I declare an integer a then we can only keep an integer in it-not a boolean or string
+  Statically typing means all of the variables have to be defined at the compile time
+->Excellent Community
+
+Key Features:-
+1)Simplicity
+2)Fast Compile time
+3)Garbage Collected language-you do not need to manage your own memory-you can manage your memory but the GO runtime is going to manage the memory.
+  The reason for that gets back to the simplicity arguement.There is a recognition that a garbage collected language does have challenges while dealing with certain 
+  usecases for eg.-Real time trading system for stock market systems have a very tough time while dealing with garbage collection.However the advantage is on the developer
+  side is to not manage the memory all the time-that doesnt mean that the delays that the garbage collector incurs havent been paid attention to.If we go back to the history 
+  of garbage collection then go language has improved upon the time of pause for garbage collection
+4)Built in Concurrency-We do not need to import any library to do this,we can do this in the base language
+5)Go compiles down to a standalone binaries which means that when you compile your Go application everything is going to be bundled under that single binary that is related
+  to that application itself,so the go runtime,any library is bundled in a single binary
+  
+  Link for compiler-"play.golang.org"
+  
+  package fmt-used to format strings
+  
+  //CODE-
+  
+  package main
+  
+  import {
+          "fmt"
+  }
+  
+  func main(){
+         fmt.Println("Hello,playground")
+  }
+  
+  //VARIABLES
+  ->Variable declaration
+  ->Redeclaration and shadowing
+  ->Visibility-we can control what aspects of our program can see a variable that we create
+  ->Naming conventions
+  ->Type Conversions
+  
+  //Code
+  
+  package main
+  
+  import {
+           "fmt"
+           
+  }
+  
+  //At the package level we cannot use the colun syntax
+  
+  //declaration at the package level
+  
+  var t int=42
+  
+  //We can create a block of variables that are declared together-At the package level
+  
+  var actorName string ="gbfbf bvrfberkl"
+  var companion string="vv efeef efqggrn"
+  var doctorNumber int=3
+  var season int=l1
+  
+  //This is a block of variables-we can declare them as follows-
+  
+  var(
+       
+   actorName string ="gbfbf bvrfberkl"
+   companion string="vv efeef efqggrn"
+   doctorNumber int=3
+   season int=l1
+  
+  )
+  
+  var(
+    counter int=0
+  )
+  
+  func main(){
+             var i int
+             i=42
+             i=27
+             fmt.Println(i)
+             var z int=34
+             fmt.Println(z)
+             y:=65
+             fmt.Println(y)
+             k:=99.
+             fmt.Printf("%v,%T",k,k)
+             fmt.Printf("%v,%T",t,t)
+  }
+  
+  //Re-assignment of variable wont create an error but re declaration of the variable will create an error
+  The variable present at the innermost level in the function overshadows the outer variables-This is called shadowing
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
