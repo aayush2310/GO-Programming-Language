@@ -44,3 +44,44 @@ Types of information to be stored in GO
 
 int,int8,int16,int32,int64
 uint,uint8,uint16,uint32,uint64
+
+  func main(){
+            a:=10
+            b:=3
+            fmt.Println(a+b)
+            fmt.Println(a-b)
+            fmt.Println(a*b)
+            fmt.Println(a/b)
+            fmt.Println(a%b)
+  }
+  
+
+package main
+  import(
+       "fmt"
+  )
+  func main(){
+             var a int =10
+             var b int8=3
+             fmt.Println(a+b)
+  }
+  
+  //This will show error_|
+  
+  //Bit Operator
+  
+  package main
+  import(
+       "fmt"
+  )
+  
+  
+  func main(){
+            a:=10
+            b:=3
+            fmt.Println(a&b)
+            fmt.Println(a|b)
+            fmt.Println(a^b)
+            fmt.Println(a&^b)
+            
+  }
