@@ -1,1 +1,56 @@
-.
+//naming a constant
+
+//a constant remains unchanged once assigned a value.
+
+package main
+
+import {
+     "fmt"
+}
+
+func main(){
+       const myConst int=42
+       fmt.Printf("%v, %T\n",myConst,myConst)
+}
+
+
+//THIS WILL THROW ERROR:-
+
+package main
+
+import {
+     "fmt"
+}
+
+func main(){
+       const myConst int=42
+       myConst=27
+       fmt.Printf("%v, %T\n",myConst,myConst)
+}
+
+//We cant assign a constant to a function which will give its output at the runtime:-
+//This will throw error:-
+
+package main
+
+import {
+     "fmt"
+     "math"
+}
+
+func main(){
+       const myConst float64=math.Sin(1.57)
+       fmt.Printf("%v, %T\n",myConst,myConst)
+}
+
+eg2:-
+
+package main
+
+import {
+     "fmt"
+}
+
+func main(){
+       
+}
