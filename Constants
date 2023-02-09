@@ -31,8 +31,8 @@ func main(){
 //We cant assign a constant to a function which will give its output at the runtime:-
 //This will throw error:-
 
-package main
 
+   
 import {
      "fmt"
      "math"
@@ -52,5 +52,187 @@ import {
 }
 
 func main(){
-       
+        const a int =14
+        const b string="foo"
+        const c float32=3.14
+        const d bool=true
+        fmt.Printf("%v\n",a)
+        fmt.Printf("%v\n",b)
+        fmt.Printf("%v\n",c)
+        fmt.Printf("%v\n",d)
+    
+}
+
+//Constant can be shadowed
+
+package main
+
+import {
+     "fmt"
+}
+
+const a int16=27
+
+func main(){
+      const a int=14
+      fmt.Printf("%v,%T\n",a,a)
+}
+
+//Adding constant to a variable
+
+package main
+
+import {
+     "fmt"
+}
+
+
+func main(){
+      const a int=14
+      var b int =27
+      fmt.Printf("%v,%T\n",a+b,a+b)
+}
+
+//We can use the compiler's ability to infer the type
+
+package main
+
+import{
+     "fmt"
+}
+
+func main(){
+     const a=42
+     fmt.Printf("%v,%T\n",a,a)
+ }
+
+package main
+
+import{
+     "fmt"
+}
+
+func main(){
+     const a=42
+     var b int16=27
+     fmt.Printf("%v,%T\n",a+b,a+b)
+ }
+ 
+ //Enumerated Constants
+ 
+ iota is increasing by one as it is assigned
+ 
+ package main
+ 
+ import {
+     "fmt"
+ }
+ 
+ const {
+        a=iota
+        b=iota
+        c=iota
+ }
+ 
+ func main(){
+          fmt.Printf("%v\n",a)
+          fmt.Printf("%v\n",b)
+          fmt.Printf("%v\n",c)
+}
+
+o/p:-
+0
+1
+2
+
+
+
+
+ package main
+ 
+ import {
+     "fmt"
+ }
+ 
+ const {
+        a=iota
+        b
+        c
+ }
+ 
+ func main(){
+          fmt.Printf("%v\n",a)
+          fmt.Printf("%v\n",b)
+          fmt.Printf("%v\n",c)
+}
+
+o/p:-
+0
+1
+2
+
+
+
+
+
+ package main
+ 
+ import {
+     "fmt"
+ }
+ 
+ const {
+        a=iota
+        b=iota
+        c=iota
+ }
+ 
+ const{
+        a1=iota
+        b1=iota
+        c1=iota 
+ }
+ 
+ func main(){
+          fmt.Printf("%v\n",a)
+          fmt.Printf("%v\n",b)
+          fmt.Printf("%v\n",c)
+          fmt.Printf("%v\n",a1)
+          fmt.Printf("%v\n",b1)
+          fmt.Printf("%v\n",c1)
+
+}
+
+o/p:-
+0
+1
+2
+0
+1
+2
+
+//Bit manipulation
+
+
+ package main
+ 
+ import {
+     "fmt"
+ }
+ 
+ const {
+     isAdmin=1<<iota
+     isHeadquarters
+     canSeeFinancials
+     
+     canseeAfrica
+     canseeAsia
+     canseeNorthAmerica
+     canSeeSouthAmerica
+ }
+  
+ 
+ func main(){
+         var roles byte=isAdmin|canSeeFinancials|canSeeEurope
+         fmt.Print("%b\n",roles)
 }
