@@ -1,0 +1,15 @@
+//Create an array
+
+package main
+
+import{
+     "fmt"
+}
+
+func main(){
+    grades:=[3]int{97,85,93}
+    fmt.Printf("Grades: %v",grades)
+}
+
+//If we take three variables then they will be assigned different locations in memory due to which their access is slow which is not the case with arrays.
+1:51
